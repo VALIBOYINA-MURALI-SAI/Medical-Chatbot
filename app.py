@@ -34,7 +34,7 @@ app = Flask(__name__)
 embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
 
 # ✅ Pinecone Vector Store
-index_name = "medicalbot-final"
+index_name = "medicalbot"
 docsearch = PineconeVectorStore.from_existing_index(
     index_name=index_name,
     embedding=embeddings
